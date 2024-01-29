@@ -47,3 +47,12 @@ function funcfour(){
 // if(headinglink1 == active){
 //     headinglink1.style.background-color.display = 'block';
 // }
+
+var popup_open = false;
+var popupElement = document.getElementById('pain');
+window.addEventListener("beforeunload", function (event) {
+    event.returnValue = false;
+    event.preventDefault();
+    popupElement.style.display = 'block';
+    popup_open = true;
+});
